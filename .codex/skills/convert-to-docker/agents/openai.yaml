@@ -1,0 +1,4 @@
+interface:
+  display_name: "Convert to Docker"
+  short_description: "Migrate ChessClaw runtime from Apple Container"
+  default_prompt: "Use $convert-to-docker to migrate ChessClaw from Apple Container to Docker while preserving the current single-channel direct-chat architecture."
