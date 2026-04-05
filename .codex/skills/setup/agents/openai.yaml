@@ -1,4 +1,0 @@
-interface:
-  display_name: "Setup ChessClaw"
-  short_description: "Run first-time setup and service bootstrap"
-  default_prompt: "Use $setup to install, authenticate, and bootstrap ChessClaw."

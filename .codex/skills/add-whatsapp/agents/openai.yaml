@@ -1,4 +1,0 @@
-interface:
-  display_name: "Add WhatsApp"
-  short_description: "Add WhatsApp transport to ChessClaw"
-  default_prompt: "Use $add-whatsapp to add WhatsApp as the ChessClaw transport in the current single-channel direct-chat architecture."
