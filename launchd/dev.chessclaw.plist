@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>dev.chessclaw</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-lc</string>
+        <string>set -a; [ -f "{{PROJECT_ROOT}}/.env" ] &amp;&amp; . "{{PROJECT_ROOT}}/.env"; exec "{{NODE_PATH}}" "{{PROJECT_ROOT}}/dist/index.js"</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>{{PROJECT_ROOT}}</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>{{HOME}}/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>{{HOME}}</string>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>{{PROJECT_ROOT}}/logs/chessclaw.log</string>
+    <key>StandardErrorPath</key>
+    <string>{{PROJECT_ROOT}}/logs/chessclaw.error.log</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+[project]
+name = "chessclaw"
+version = "0.1.0"
+description = "Personal Chess AI assistant. Lightweight, secure, customizable."
+readme = "README.md"
+authors = [
+    { name = "Mahmoud Ben Hassine"}
+]
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=12.1.1",
+    "python-chess>=1.999",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.11,<0.11.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "backend"
+module-root = ""

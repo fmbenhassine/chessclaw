@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug ChessClaw"
+  short_description: "Debug Codex runtime, auth, mounts, and sessions"
+  default_prompt: "Use $debug to investigate ChessClaw runtime and container failures."

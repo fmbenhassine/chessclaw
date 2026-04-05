@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessClaw | Your Personal Chess AI Assistant</title>
+    <meta
+      name="description"
+      content="ChessClaw is a personal Chess AI assistant that syncs your games, analyzes missed tactics, renders puzzles, and answers questions from your own chess database."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/site.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="ChessClaw home">
+          <img src="assets/img/chessclaw-logo.png" alt="" class="brand-mark">
+          <span>ChessClaw</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav">
+          <a href="#features">Features</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#quickstart">Quick Start</a>
+          <a href="#requests">Example Requests</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero reveal">
+          <div class="hero-copy">
+            <h1>Your chess database, analysis engine, and AI coach in one assistant.</h1>
+            <p class="hero-text">
+              ChessClaw watches your games on Lichess.org and Chess.com, brings them into a
+              single database, analyzes tactical misses, renders training puzzles, and answers
+              natural-language questions about your chess games.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://github.com/fmbenhassine/chessclaw" target="_blank" rel="noopener noreferrer">
+                <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2C6.477 2 2 6.59 2 12.25c0 4.528 2.865 8.37 6.839 9.727.5.095.683-.223.683-.495 0-.244-.009-.89-.014-1.747-2.782.62-3.369-1.376-3.369-1.376-.455-1.18-1.11-1.495-1.11-1.495-.908-.638.069-.625.069-.625 1.004.072 1.532 1.054 1.532 1.054.892 1.566 2.341 1.114 2.91.852.091-.664.349-1.114.635-1.37-2.221-.261-4.555-1.14-4.555-5.073 0-1.12.39-2.036 1.03-2.754-.104-.262-.447-1.316.098-2.744 0 0 .84-.276 2.75 1.052A9.303 9.303 0 0 1 12 7.04a9.27 9.27 0 0 1 2.504.349c1.909-1.328 2.747-1.052 2.747-1.052.547 1.428.203 2.482.1 2.744.64.718 1.028 1.634 1.028 2.754 0 3.943-2.338 4.808-4.566 5.064.359.317.678.943.678 1.9 0 1.372-.012 2.478-.012 2.815 0 .275.18.595.688.494C19.138 20.616 22 16.776 22 12.25 22 6.59 17.523 2 12 2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>Get Started</span>
+              </a>
+              <a class="button button-secondary" href="#quickstart">
+                <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 4.75A1.75 1.75 0 0 1 6.75 3h10.5A1.75 1.75 0 0 1 19 4.75v14.5A1.75 1.75 0 0 1 17.25 21H6.75A1.75 1.75 0 0 1 5 19.25V4.75Zm2 .25v14h10V5H7Zm2 3h6v2H9V8Zm0 4h6v2H9v-2Zm0 4h4v2H9v-2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>Quick Start</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-glow"></div>
+            <img src="assets/img/chessclaw-hero.png" alt="ChessClaw hero artwork" class="hero-image">
+          </div>
+        </section>
+
+        <section id="features" class="section reveal">
+          <div class="section-heading">
+            <div class="eyebrow">What It Does</div>
+            <h2>Built for real chess work, not generic assistant fluff.</h2>
+            <p>
+              ChessClaw is focused on one job: helping you understand, organize, and improve your
+              chess through a secure personal assistant that works from your own data.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Game Sync</h3>
+              <p>
+                Import and sync games from Lichess.org and Chess.com into a single local database.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Natural-Language Insights</h3>
+              <p>
+                Ask questions about openings, opponents, results, trends, recent games, or tactical mistakes.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Missed-Mate Analysis</h3>
+              <p>
+                Run Stockfish-backed analysis to find missed mating opportunities and review them later.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Puzzle Rendering</h3>
+              <p>
+                Turn missed tactics into visual puzzle images you can review on demand or on a schedule.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Scheduled Chess Tasks</h3>
+              <p>
+                Set recurring jobs for syncs, insights, reminders, and training flows that message you back.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Training From Your Own Games</h3>
+              <p>
+                Turn your own missed opportunities into repeatable study material instead of generic puzzle feeds.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="architecture" class="section section-alt reveal">
+          <div class="section-heading">
+            <div class="eyebrow">Architecture</div>
+            <h2>Small enough to understand. Focused enough to trust.</h2>
+            <p>
+              ChessClaw is intentionally lean: one Node.js process, one assistant workspace, one
+              configured chat, one persistent chess database, and isolated agent runs.
+            </p>
+          </div>
+
+          <div class="architecture-panel">
+            <div class="flow-row">
+              <div class="flow-chip">Telegram Bot</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-chip">SQLite State</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-chip">Single Queue</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-chip">Containerized Codex Agent</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-chip">Chess Actions + Reply</div>
+            </div>
+
+            <div class="architecture-copy">
+              <p>
+                The host handles Telegram, task scheduling, database access, and trusted chess
+                scripts. The assistant runs in an isolated container and uses MCP tools to query the
+                chess database, sync games, analyze positions, and render puzzle images.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="philosophy" class="section reveal">
+          <div class="section-heading">
+            <div class="eyebrow">Philosophy</div>
+            <h2>Forkable, inspectable, and customized by code instead of config sprawl.</h2>
+          </div>
+
+          <div class="principles">
+            <article class="principle-card">
+              <h3>Small Enough to Understand</h3>
+              <p>One process, a small codebase, and a clear data flow you can actually audit.</p>
+            </article>
+            <article class="principle-card">
+              <h3>Secure by Isolation</h3>
+              <p>Agent sessions run in containers and only see explicitly mounted directories.</p>
+            </article>
+            <article class="principle-card">
+              <h3>Built for One User</h3>
+              <p>Not a generic framework. It is working software shaped around a real chess workflow.</p>
+            </article>
+            <article class="principle-card">
+              <h3>AI-Native</h3>
+              <p>No wizard-heavy setup. Codex guides installation, customization, and debugging.</p>
+            </article>
+            <article class="principle-card">
+              <h3>Skills Over Bloat</h3>
+              <p>New capabilities should arrive as transformation skills, not permanent complexity in core.</p>
+            </article>
+            <article class="principle-card">
+              <h3>Chess-First</h3>
+              <p>The assistant exists to help you improve at chess, not to become a general-purpose chatbot.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="quickstart" class="section section-alt reveal">
+          <div class="section-heading">
+            <div class="eyebrow">Quick Start</div>
+            <h2>Clone it, open codex, and run the setup skill.</h2>
+          </div>
+
+          <div class="quickstart-layout quickstart-layout-wide">
+            <div class="terminal-card terminal-card-wide">
+              <div class="terminal-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <pre><code><span class="terminal-prefix">$></span>git clone https://github.com/fmbenhassine/chessclaw.git
+<span class="terminal-prefix">$></span>cd chessclaw
+<span class="terminal-prefix">$></span>codex</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="requests" class="section reveal">
+          <div class="section-heading">
+            <div class="eyebrow">Example Requests</div>
+            <h2>Talk to ChessClaw the way you already think about your chess.</h2>
+          </div>
+
+          <div class="example-gallery">
+            <figure class="example-shot">
+              <img src="assets/img/missed-mate.jpg" alt="ChessClaw missed mate puzzle conversation screenshot">
+            </figure>
+            <figure class="example-shot">
+              <img src="assets/img/elo-rating-plot.jpg" alt="ChessClaw Elo rating evolution conversation screenshot">
+            </figure>
+            <figure class="example-shot">
+              <img src="assets/img/opening-stats.jpg" alt="ChessClaw opening stats conversation screenshot">
+            </figure>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <p>ChessClaw: Your personal chess AI assistant, containerized and customizable.</p>
+        <p>© <span id="year"></span> ChessClaw</p>
+      </footer>
+    </div>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
